@@ -1,0 +1,210 @@
+Using device: cpu
+Starting with 10 Population:
+[Arch(conv=3, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=3, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=2, acc=0.0000), Arch(conv=3, acc=0.0000), Arch(conv=2, acc=0.0000), Arch(conv=3, acc=0.0000), Arch(conv=3, acc=0.0000)]
+
+
+============================================================
+Generation 1/5
+============================================================
+Evaluating architecture 1/10... Conv_Params: 224096 , FC_Params: 527114 , Penalty: 3.9139 , Accuracy: 0.34 , Fitness Score: 0.30086106 
+Fitness: 0.3009, Accuracy: 0.3400
+Evaluating architecture 2/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.49 , Fitness Score: 0.45018906 
+Fitness: 0.4502, Accuracy: 0.4900
+Evaluating architecture 3/10... Conv_Params: 178112 , FC_Params: 525002 , Penalty: 3.8531 , Accuracy: 0.28 , Fitness Score: 0.24146874000000002 
+Fitness: 0.2415, Accuracy: 0.2800
+Evaluating architecture 4/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.44 , Fitness Score: 0.40000202 
+Fitness: 0.4000, Accuracy: 0.4400
+Evaluating architecture 5/10... Conv_Params: 155216 , FC_Params: 4199946 , Penalty: 29.5548 , Accuracy: 0.28 , Fitness Score: -0.015548379999999973 
+Fitness: -0.0155, Accuracy: 0.2800
+Evaluating architecture 6/10... Conv_Params: 78720 , FC_Params: 2097866 , Penalty: 14.7638 , Accuracy: 0.28 , Fitness Score: 0.13236218000000002 
+Fitness: 0.1324, Accuracy: 0.2800
+Evaluating architecture 7/10... Conv_Params: 22096 , FC_Params: 4199946 , Penalty: 29.4217 , Accuracy: 0.4 , Fitness Score: 0.10578282000000006 
+Fitness: 0.1058, Accuracy: 0.4000
+Evaluating architecture 8/10... Conv_Params: 15200 , FC_Params: 525002 , Penalty: 3.6902 , Accuracy: 0.43 , Fitness Score: 0.39309786 
+Fitness: 0.3931, Accuracy: 0.4300
+Evaluating architecture 9/10... Conv_Params: 105040 , FC_Params: 1051402 , Penalty: 7.4649 , Accuracy: 0.32 , Fitness Score: 0.24535146000000002 
+Fitness: 0.2454, Accuracy: 0.3200
+Evaluating architecture 10/10... Conv_Params: 185472 , FC_Params: 4199946 , Penalty: 29.5851 , Accuracy: 0.28 , Fitness Score: -0.01585093999999998 
+Fitness: -0.0159, Accuracy: 0.2800
+
+Sorting population in terms of fitness score (high -> low) ...
+Best in generation: Arch(conv=4, acc=0.4900)
+
+Best overall: Arch(conv=4, acc=0.4900)
+
+Performing tournament selection of total population: 10 ...
+Performing Crossover & Mutation ...
+Elitism: Keeping top 2 architectures in next generation.
+Next Generation: [Arch(conv=4, acc=0.4900), Arch(conv=4, acc=0.4400), Arch(conv=1, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=3, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.4900), Arch(conv=4, acc=0.4900)]
+
+============================================================
+Generation 2/5
+============================================================
+Evaluating architecture 1/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.32 , Fitness Score: 0.28018906 
+Fitness: 0.2802, Accuracy: 0.3200
+Evaluating architecture 2/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.3 , Fitness Score: 0.26000202 
+Fitness: 0.2600, Accuracy: 0.3000
+Evaluating architecture 3/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.41 , Fitness Score: 0.33649145999999996 
+Fitness: 0.3365, Accuracy: 0.4100
+Evaluating architecture 4/10... Conv_Params: 423568 , FC_Params: 1051402 , Penalty: 7.7834 , Accuracy: 0.11 , Fitness Score: 0.03216618 
+Fitness: 0.0322, Accuracy: 0.1100
+Evaluating architecture 5/10... Conv_Params: 227360 , FC_Params: 1049994 , Penalty: 7.5773 , Accuracy: 0.33 , Fitness Score: 0.25422682 
+Fitness: 0.2542, Accuracy: 0.3300
+Evaluating architecture 6/10... Conv_Params: 506576 , FC_Params: 2099978 , Penalty: 15.2064 , Accuracy: 0.36 , Fitness Score: 0.20793578 
+Fitness: 0.2079, Accuracy: 0.3600
+Evaluating architecture 7/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.24 , Fitness Score: 0.20018905999999997 
+Fitness: 0.2002, Accuracy: 0.2400
+Evaluating architecture 8/10... Conv_Params: 301152 , FC_Params: 262858 , Penalty: 2.1412 , Accuracy: 0.24 , Fitness Score: 0.21858842 
+Fitness: 0.2186, Accuracy: 0.2400
+Evaluating architecture 9/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.31 , Fitness Score: 0.27018906 
+Fitness: 0.2702, Accuracy: 0.3100
+Evaluating architecture 10/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.21 , Fitness Score: 0.17018906 
+Fitness: 0.1702, Accuracy: 0.2100
+
+Sorting population in terms of fitness score (high -> low) ...
+Best in generation: Arch(conv=1, acc=0.4100)
+
+Best overall: Arch(conv=4, acc=0.4900)
+
+Performing tournament selection of total population: 10 ...
+Performing Crossover & Mutation ...
+Elitism: Keeping top 2 architectures in next generation.
+Next Generation: [Arch(conv=1, acc=0.4100), Arch(conv=4, acc=0.3200), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=2, acc=0.0000), Arch(conv=3, acc=0.3300), Arch(conv=3, acc=0.3300), Arch(conv=4, acc=0.0000), Arch(conv=1, acc=0.0000)]
+
+============================================================
+Generation 3/5
+============================================================
+Evaluating architecture 1/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.42 , Fitness Score: 0.34649146 
+Fitness: 0.3465, Accuracy: 0.4200
+Evaluating architecture 2/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.22 , Fitness Score: 0.18018906 
+Fitness: 0.1802, Accuracy: 0.2200
+Evaluating architecture 3/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.29 , Fitness Score: 0.25000202 
+Fitness: 0.2500, Accuracy: 0.2900
+Evaluating architecture 4/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.42 , Fitness Score: 0.38000202 
+Fitness: 0.3800, Accuracy: 0.4200
+Evaluating architecture 5/10... Conv_Params: 301152 , FC_Params: 525706 , Penalty: 3.9811 , Accuracy: 0.27 , Fitness Score: 0.23018906 
+Fitness: 0.2302, Accuracy: 0.2700
+Evaluating architecture 6/10... Conv_Params: 26528 , FC_Params: 1049994 , Penalty: 7.3765 , Accuracy: 0.41 , Fitness Score: 0.33623514 
+Fitness: 0.3362, Accuracy: 0.4100
+Evaluating architecture 7/10... Conv_Params: 227360 , FC_Params: 1049994 , Penalty: 7.5773 , Accuracy: 0.31 , Fitness Score: 0.23422682 
+Fitness: 0.2342, Accuracy: 0.3100
+Evaluating architecture 8/10... Conv_Params: 227360 , FC_Params: 1049994 , Penalty: 7.5773 , Accuracy: 0.33 , Fitness Score: 0.25422682 
+Fitness: 0.2542, Accuracy: 0.3300
+Evaluating architecture 9/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.4 , Fitness Score: 0.32578586 
+Fitness: 0.3258, Accuracy: 0.4000
+Evaluating architecture 10/10... Conv_Params: 18944 , FC_Params: 2097866 , Penalty: 14.7040 , Accuracy: 0.44 , Fitness Score: 0.29295994000000003 
+Fitness: 0.2930, Accuracy: 0.4400
+
+Sorting population in terms of fitness score (high -> low) ...
+Best in generation: Arch(conv=4, acc=0.4200)
+
+Best overall: Arch(conv=4, acc=0.4900)
+
+Performing tournament selection of total population: 10 ...
+Performing Crossover & Mutation ...
+Elitism: Keeping top 2 architectures in next generation.
+Next Generation: [Arch(conv=4, acc=0.4200), Arch(conv=1, acc=0.4200), Arch(conv=1, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=2, acc=0.4100), Arch(conv=4, acc=0.4000)]
+
+============================================================
+Generation 4/5
+============================================================
+Evaluating architecture 1/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.45 , Fitness Score: 0.41000202 
+Fitness: 0.4100, Accuracy: 0.4500
+Evaluating architecture 2/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.48 , Fitness Score: 0.40649145999999997 
+Fitness: 0.4065, Accuracy: 0.4800
+Evaluating architecture 3/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.38 , Fitness Score: 0.30649146 
+Fitness: 0.3065, Accuracy: 0.3800
+Evaluating architecture 4/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.31 , Fitness Score: 0.23578585999999999 
+Fitness: 0.2358, Accuracy: 0.3100
+Evaluating architecture 5/10... Conv_Params: 20400 , FC_Params: 132490 , Penalty: 0.9478 , Accuracy: 0.19 , Fitness Score: 0.1805217 
+Fitness: 0.1805, Accuracy: 0.1900
+Evaluating architecture 6/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.45 , Fitness Score: 0.37649146 
+Fitness: 0.3765, Accuracy: 0.4500
+Evaluating architecture 7/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.48 , Fitness Score: 0.40578585999999994 
+Fitness: 0.4058, Accuracy: 0.4800
+Evaluating architecture 8/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.4 , Fitness Score: 0.32578586 
+Fitness: 0.3258, Accuracy: 0.4000
+Evaluating architecture 9/10... Conv_Params: 26528 , FC_Params: 1049994 , Penalty: 7.3765 , Accuracy: 0.3 , Fitness Score: 0.22623514 
+Fitness: 0.2262, Accuracy: 0.3000
+Evaluating architecture 10/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.22 , Fitness Score: 0.14578586 
+Fitness: 0.1458, Accuracy: 0.2200
+
+Sorting population in terms of fitness score (high -> low) ...
+Best in generation: Arch(conv=4, acc=0.4500)
+
+Best overall: Arch(conv=4, acc=0.4900)
+
+Performing tournament selection of total population: 10 ...
+Performing Crossover & Mutation ...
+Elitism: Keeping top 2 architectures in next generation.
+Next Generation: [Arch(conv=4, acc=0.4500), Arch(conv=1, acc=0.4800), Arch(conv=4, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=4, acc=0.4800), Arch(conv=1, acc=0.3800)]
+
+============================================================
+Generation 5/5
+============================================================
+Evaluating architecture 1/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.4 , Fitness Score: 0.36000202000000003 
+Fitness: 0.3600, Accuracy: 0.4000
+Evaluating architecture 2/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.39 , Fitness Score: 0.31649146 
+Fitness: 0.3165, Accuracy: 0.3900
+Evaluating architecture 3/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.42 , Fitness Score: 0.38000202 
+Fitness: 0.3800, Accuracy: 0.4200
+Evaluating architecture 4/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.4 , Fitness Score: 0.32649146 
+Fitness: 0.3265, Accuracy: 0.4000
+Evaluating architecture 5/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.41 , Fitness Score: 0.33649145999999996 
+Fitness: 0.3365, Accuracy: 0.4100
+Evaluating architecture 6/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.38 , Fitness Score: 0.30649146 
+Fitness: 0.3065, Accuracy: 0.3800
+Evaluating architecture 7/10... Conv_Params: 324784 , FC_Params: 525002 , Penalty: 3.9998 , Accuracy: 0.42 , Fitness Score: 0.38000202 
+Fitness: 0.3800, Accuracy: 0.4200
+Evaluating architecture 8/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.2 , Fitness Score: 0.12578586 
+Fitness: 0.1258, Accuracy: 0.2000
+Evaluating architecture 9/10... Conv_Params: 71456 , FC_Params: 1049994 , Penalty: 7.4214 , Accuracy: 0.41 , Fitness Score: 0.33578586 
+Fitness: 0.3358, Accuracy: 0.4100
+Evaluating architecture 10/10... Conv_Params: 896 , FC_Params: 1049994 , Penalty: 7.3509 , Accuracy: 0.38 , Fitness Score: 0.30649146 
+Fitness: 0.3065, Accuracy: 0.3800
+
+Sorting population in terms of fitness score (high -> low) ...
+Best in generation: Arch(conv=4, acc=0.4200)
+
+Best overall: Arch(conv=4, acc=0.4900)
+
+Performing tournament selection of total population: 10 ...
+Performing Crossover & Mutation ...
+Elitism: Keeping top 2 architectures in next generation.
+Next Generation: [Arch(conv=4, acc=0.4200), Arch(conv=4, acc=0.4200), Arch(conv=4, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000)]
+
+============================================================
+FINAL BEST ARCHITECTURE
+============================================================
+Genes: {'num_conv': 4, 'conv_configs': [{'filters': 32, 'kernel_size': 3}, {'filters': 32, 'kernel_size': 5}, {'filters': 128, 'kernel_size': 7}, {'filters': 64, 'kernel_size': 3}], 'pool_type': 'max', 'activation': 'relu', 'fc_units': 128}
+Accuracy: 0.4900
+Fitness: 0.4502
+
+Total parameters: 827,370
+
+Model architecture:
+CNN(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(32, 128, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3))
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (classifier): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): Linear(in_features=4096, out_features=128, bias=True)
+    (2): ReLU(inplace=True)
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
