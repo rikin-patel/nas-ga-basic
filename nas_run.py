@@ -31,8 +31,8 @@ trainset = CIFAR10(root='./data', train=True, download=True, transform=transform
 valset = CIFAR10(root='./data', train=False, download=True, transform=transform)
 
 # Use only 5000 samples for quick NAS
-train_subset = Subset(trainset, range(500))
-val_subset = Subset(valset, range(100))
+train_subset = Subset(trainset, range(50))
+val_subset = Subset(valset, range(10))
 
 train_loader = DataLoader(train_subset, batch_size=256, shuffle=True)
 val_loader = DataLoader(val_subset, batch_size=256, shuffle=False)

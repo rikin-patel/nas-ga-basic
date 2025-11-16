@@ -111,8 +111,14 @@ class GeneticAlgorithm:
             # complexity_penalty = num_params / 1e6  # Normalize
 
             # Count parameters in convolutional and FC layers
-            conv_params = sum(layer.num_parameters for layer in model.conv_layers)
-            fc_params = sum(layer.num_parameters for layer in model.fc_layers)
+            conv_params = 0
+            fc_params = 0
+            for layer in model.modules():
+                if isinstance(layer, torch.nn.Conv2d):
+                    conv_params += sum(p.numel() for p in layer.parameters())
+                elif isinstance(layer, torch.nn.Linear):
+                    fc_params += sum(p.numel() for p in layer.parameters())
+
             # Assigned Hardcoded Weights: 1 for conv, 7 for FC
             conv_weight = 1.0
             fc_weight = 7.0
