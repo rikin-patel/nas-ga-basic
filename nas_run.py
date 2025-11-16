@@ -15,6 +15,7 @@ all_logs = [i for i in os.listdir(os.path.join(parent, 'outputs')) if 'log' in i
 os.mkdir(os.path.join(parent, 'outputs', f'run_{len(all_logs)+1}'))
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = torch.device('xpu' if torch.xpu.is_available() else 'cpu')
 
 sys.stdout = open(os.path.join(parent, 'outputs', f'run_{len(all_logs)+1}', f'nas_run.log'), 'w')
 
@@ -30,8 +31,8 @@ trainset = CIFAR10(root='./data', train=True, download=True, transform=transform
 valset = CIFAR10(root='./data', train=False, download=True, transform=transform)
 
 # Use only 5000 samples for quick NAS
-train_subset = Subset(trainset, range(5000))
-val_subset = Subset(valset, range(1000))
+train_subset = Subset(trainset, range(500))
+val_subset = Subset(valset, range(100))
 
 train_loader = DataLoader(train_subset, batch_size=256, shuffle=True)
 val_loader = DataLoader(val_subset, batch_size=256, shuffle=False)

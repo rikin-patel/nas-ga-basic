@@ -70,7 +70,6 @@ class GeneticAlgorithm:
             criterion = nn.CrossEntropyLoss()
             optimizer = AdamW(model.parameters(), lr=0.001)
             
-            # Quick training
             best_acc = 0
             patience = 10
             step = 1
@@ -108,17 +107,27 @@ class GeneticAlgorithm:
                     break
             
             # Calculate model complexity penalty
-            num_params = sum(p.numel() for p in model.parameters())
-            complexity_penalty = num_params / 1e6  # Normalize
+            # num_params = sum(p.numel() for p in model.parameters())
+            # complexity_penalty = num_params / 1e6  # Normalize
 
+            # Count parameters in convolutional and FC layers
+            conv_params = sum(layer.num_parameters for layer in model.conv_layers)
+            fc_params = sum(layer.num_parameters for layer in model.fc_layers)
+            # Assigned Hardcoded Weights: 1 for conv, 7 for FC
+            conv_weight = 1.0
+            fc_weight = 7.0
+            complexity_penalty = (conv_weight * conv_params + fc_weight * fc_params) / 1e6
+            
             del model, inputs, outputs, labels
             torch.cuda.empty_cache()
+            # torch.xpu.empty_cache()
             
             # Fitness = accuracy - lambda * complexity
             architecture.accuracy = best_acc
             architecture.best_epoch = best_epoch
             architecture.fitness = best_acc - 0.01 * complexity_penalty
-            
+
+            print(f"Conv_Params: {conv_params} , FC_Params: {fc_params} , Penalty: {complexity_penalty:.4f} , Accuracy: {best_acc} , Fitness Score: {architecture.fitness} ", flush=True)
             return architecture.fitness
             
         except Exception as e:
@@ -127,7 +136,15 @@ class GeneticAlgorithm:
             architecture.accuracy = 0
             return 0
     
-    def selection(self):
+    def selection(self, selection_method=1):
+        if selection_method == 1:
+            return self.tournament_selection()
+        elif selection_method == 2:
+            return self.roulette_wheel_selection()
+        else:
+            raise ValueError("Invalid selection method")
+
+    def tournament_selection(self, tournament_size=3):
         """Tournament selection"""
         tournament_size = 3
         selected = []
@@ -137,6 +154,43 @@ class GeneticAlgorithm:
             winner = max(tournament, key=lambda x: x.fitness)
             selected.append(winner)
         
+        return selected
+        
+    def roulette_wheel_selection(self):
+        fitnesses = []
+        for arch in self.population:
+            arch_f = arch.fitness
+            if arch_f is None or (isinstance(arch_f, float) and arch_f != arch_f):
+                arch_f = 0.0
+            fitnesses.append(float(arch_f))
+
+        min_f = min(fitnesses)
+        shift = 0.0
+        if min_f <= 0.0:
+            shift = abs(min_f) + 1e-8
+        adjusted = [f + shift for f in fitnesses]
+
+        total = sum(adjusted)
+        selected = []
+
+        if total <= 0.0:
+            for _ in range(self.population_size):
+                selected.append(random.choice(self.population))
+            return selected
+
+        cumulative = []
+        c = 0.0
+        for a in adjusted:
+            c += a
+            cumulative.append(c)
+
+        for _ in range(self.population_size):
+            pick = random.uniform(0.0, total)
+            for idx, cum_val in enumerate(cumulative):
+                if pick <= cum_val:
+                    selected.append(self.population[idx])
+                    break
+
         return selected
     
     def crossover(self, parent1, parent2):
@@ -241,7 +295,8 @@ class GeneticAlgorithm:
             
             # Selection
             print(f"\nPerforming tournament selection of total population: {self.population_size} ...", flush=True)
-            selected = self.selection()
+            #selected = self.selection()
+            selected = self.selection(selection_method=2)
             
             # Crossover and Mutation
             print(f"Performing Crossover & Mutation ...", flush=True)
